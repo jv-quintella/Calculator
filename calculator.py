@@ -1,4 +1,5 @@
 import math
+from fractions import Fraction
 
 def add(a, b):
     return a + b
@@ -24,11 +25,24 @@ def sqrt(a):
 def square(a):
     return a * a
 
-def percent(a):
-    pass
+def percent(a, b):
+    if b is not None:
+        return (a * b) / 100
+    else:
+        return a / 100
 
 def fraction(a, b):
-    pass
+    try:
+        if b is not None:
+
+            result = Fraction(a, b)
+        else:
+            result = Fraction(a)
+            
+        return str(result.limit_denominator())
+        
+    except ValueError:
+        return "Syntax error"
 
 def Menu():
     pass
