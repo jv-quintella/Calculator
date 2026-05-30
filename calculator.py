@@ -63,7 +63,7 @@ class Calc(ctk.CTk):
 
         buttons = [
             ('%', 'CE', 'C', '⌫'),
-            ('1/x', 'x²', '√', '÷'),
+            ('A/B', 'x²', '√', '÷'),
             ('7', '8', '9', '×'),
             ('4', '5', '6', '-'),
             ('1', '2', '3', '+'),
@@ -205,7 +205,7 @@ class Calc(ctk.CTk):
                 self.display.insert(0, "Error")
             self.new_input = True
             
-        elif value == '1/x':
+        elif value == 'A/B':
             try:
                 res = fraction(float(current_text))
                 self.display.delete(0, 'end')
@@ -238,6 +238,7 @@ class Calc(ctk.CTk):
                     self.display.delete(0, 'end')
                     self.display.insert(0, current_text[1:])
                 else:
+                    self.display.delete(0, 'end')
                     self.display.insert(0, "-" + current_text)
 
 if __name__ == "__main__":
