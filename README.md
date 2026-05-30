@@ -1,4 +1,5 @@
 Standard Python Calculator
+
 This is a standard Python calculator featuring all basic math functions. The project is the finished version of my originally unfinished CS50P final project, now with a GUI alongside a simplified terminal application.
 
 How to Use It
